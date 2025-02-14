@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# 📋 Organo-Alura
+Projeto desenvolvido durante o curso "React: Desenvolvendo com JavaScript" da Alura, com o objetivo de criar uma aplicação para organizar pessoas e times de áreas relacionadas à tecnologia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📖 Sobre o Projeto
 
-## Available Scripts
+O Organo é uma aplicação web que permite gerenciar e visualizar estruturas organizacionais de forma intuitiva e visualmente atraente. Os usuários podem criar equipes, adicionar membros e personalizar as cores das equipes para melhor identificaçã
 
-In the project directory, you can run:
+## 🛠️ Tecnologias Utilizadas
 
-### `npm start`
+- React.js
+- JavaScript
+- CSS
+- HTML
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📦 Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Criação e gerenciamento de equipes com cores personalizadas.
+- Adição de membros às equipes com informações como nome, cargo e imagem.
+- Interface responsiva que se adapta a diferentes tamanhos de tela.
 
-### `npm test`
+## 🚀 Como Executar o Projeto Localmente
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone o repositório:
 
-### `npm run build`
+```bash
+git clone https://github.com/fergrenteski/organo-alura.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2.Navegue até o diretório do projeto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+cd organo-alura
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.Instale as dependências:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4.Inicie a aplicação:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5.Acesse a aplicação em seu navegador através do endereço:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+http://localhost:3000
+```
 
-## Learn More
+## 🌐 Visualizar o Projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Você pode acessar a versão online do projeto hospedada no Vercel através do seguinte link:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Organo-Alura no Vercel](https://organo-alura-mu-vert.vercel.app/)
 
-### Code Splitting
+## 🔗 Links Úteis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Repositório Original do Curso](https://github.com/alura-cursos/organo)
+- [Alura](https://www.alura.com.br/)
 
-### Analyzing the Bundle Size
+## 👤 Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Nome: Luiz Fernando Grenteski
+- GitHub: [fergrenteski](https://github.com/fergrenteski)
 
-### Making a Progressive Web App
+## 📄 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
