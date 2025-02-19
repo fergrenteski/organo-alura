@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Botao from '../Botao'
-import CampoTexto from '../CampoTexto'
+import Campo from '../Campo'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 import { v4 as uuidv4 } from 'uuid'
@@ -14,6 +14,10 @@ const Formulario = (props) => {
     const [nomeTime, setNomeTime] = useState('')
     const [corTime, setCorTime] = useState('')
 
+    /**
+     * Função para salvar um novo colaborador.
+     * @param {Event} evento Evento de submit.
+     */
     const aoSalvar = (evento) => {
         evento.preventDefault()
         props.aoColaboradorCadastrado({
@@ -29,6 +33,10 @@ const Formulario = (props) => {
         setTime('')
     }
 
+    /**
+     * Função para salvar um novo time.
+     * @param {Event} evento Evento de submit.
+     */
     const aoSalvarTime = (evento) => {
         evento.preventDefault()
         props.aoTimeCadastrado({
@@ -43,22 +51,22 @@ const Formulario = (props) => {
     return (
         <section className="formulario">
             <form onSubmit={(e) => aoSalvar(e)}>
-                <h2>Preencha os dados para criar o card do colaborador</h2>
-                <CampoTexto 
+                <h2>Criar novo Colaborador</h2>
+                <Campo 
                     obrigatorio={true}
                     label="Nome"
                     placeholder="Digite seu nome" 
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}
                 />
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label="Cargo"
                     placeholder="Digite seu cargo" 
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
                 />
-                <CampoTexto
+                <Campo
                     label="Imagem"
                     placeholder="Digite o endereço da imagem" 
                     valor={imagem}
@@ -76,18 +84,19 @@ const Formulario = (props) => {
                 </Botao>
             </form>
             <form onSubmit={(e) => aoSalvarTime(e)}>
-                <h2>Preencha os dados para criar um novo time</h2>
-                <CampoTexto 
+                <h2>Criar novo Time</h2>
+                <Campo 
                     obrigatorio
                     label="Nome"
                     placeholder="Digite o nome do time" 
                     valor={nomeTime}
                     aoAlterado={valor => setNomeTime(valor)}
                 />
-                <CampoTexto
+                <Campo
                     obrigatorio
                     label="Cor"
                     placeholder="Digite a cor do time" 
+                    tipo="color"
                     valor={corTime}
                     aoAlterado={valor => setCorTime(valor)}
                 />

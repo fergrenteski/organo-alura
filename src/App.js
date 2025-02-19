@@ -59,7 +59,8 @@ function App() {
       nome: 'JULIANA AMOASEI',
       cargo: 'Desenvolvedora de software e instrutora',
       imagem: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
-      time: times[0].nome
+      time: times[0].nome,
+      favorito: true
     },
     {
       id: uuidv4(),
@@ -73,14 +74,16 @@ function App() {
       nome: 'GUILHERME LIMA',
       cargo: 'Desenvolvedor Python e JavaScript na Alura',
       imagem: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
-      time: times[0].nome
+      time: times[0].nome,
+      favorito: true
     },
     {
       id: uuidv4(),
       nome: 'PAULO SILVEIRA',
       cargo: 'Hipster e CEO da Alura',
       imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
-      time: times[0].nome
+      time: times[0].nome,
+      favorito: true
     },
     {
       id: uuidv4(),
@@ -226,17 +229,42 @@ function App() {
 
   const [colaboradores, setColaboradores] = useState(inicial);
 
+  /**
+   * Função para adicionar um novo colaborador.
+   * @param {Object} colaborador objeto com as informações do colaborador.
+   */
   const aoNovoColaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador])
   }
 
+  /**
+   * Função para adicionar um novo time.
+   * @param {Object} time objeto com as informações do time.
+   */
   const aoTimeAdicionado = (time) => {
     let corForte = fortalecerCor(time.corTime);
     setTimes([...times, {id: time.id, nome: time.nomeTime, corPrimaria: time.corTime, corSecundaria: corForte}])
   }
 
+  /**
+   * Função para deletar um colaborador.
+   * @param {uuidv4} id Id do colaborador.
+   */
   function deletarColaborador(id) {
     setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
+  }
+
+  /**
+   * Função para favoritar um colaborador.
+   * @param {uuidv4} id Id do colaborador.
+   */
+  function favoritarColaborador(id) {
+    setColaboradores(colaboradores.map(colaborador => {
+      if(colaborador.id === id) {
+        colaborador.favorito = !colaborador.favorito;
+      }
+      return colaborador;
+    }))
   }
 
   /**
@@ -277,6 +305,7 @@ function App() {
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
         aoDeletar={deletarColaborador}
         mudarCor={mudarCorDoTime}
+        aoFavoritar={favoritarColaborador}
       />)}   
       <Rodape />
 

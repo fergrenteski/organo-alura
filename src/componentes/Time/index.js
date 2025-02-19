@@ -1,7 +1,7 @@
 import Colaborador from "../Colaborador";
 import "./Time.css";
 
-const Time = ({ time, colaboradores, aoDeletar, mudarCor}) => {
+const Time = ({ time, colaboradores, aoDeletar, mudarCor, aoFavoritar}) => {
   const css = { backgroundColor: time.corSecundaria };
 
   return colaboradores.length > 0 ? (
@@ -15,6 +15,7 @@ const Time = ({ time, colaboradores, aoDeletar, mudarCor}) => {
             key={colaborador.id}
             colaborador={colaborador}
             aoDeletar={aoDeletar}
+            aoFavoritar={aoFavoritar}
           />
         ))}
       </div>
